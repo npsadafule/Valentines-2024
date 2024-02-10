@@ -1,0 +1,83 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f69d9d 10%, #ffc898 100%);
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden; /* Prevents horizontal scrolling on smaller screens */
+}
+
+.App {
+  text-align: center;
+  width: auto;
+  max-width: 600px;
+  margin: 20px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: padding 0.3s ease;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 40px;
+}
+
+button {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:first-child {
+  background-color: #4CAF50; /* Green */
+}
+
+button:last-child {
+  background-color: #f44336; /* Red */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App {
+    padding: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  button {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 14px; /* Adjust button font size for smaller screens */
+  }
+}
