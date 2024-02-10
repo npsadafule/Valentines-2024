@@ -9,11 +9,22 @@ function App() {
   const [buttonLabel, setButtonLabel] = useState("No");
   const [showMessage, setShowMessage] = useState(false);
 
-  // Array of messages for each click, up to 10
   const messages = [
-    "Why not??", "Seriously?", "Please reconsider.", "Not even for a coffee?",
-    "Are you sure?", "Think again!", "But why?", "Let's give it a try!",
-    "Just this once?", "Last chance, I promise!"
+    "Why not??", 
+    "Are you sure?",
+    "Really sure?",
+    "Seriously?",
+    "Think again!",
+    "Please reconsider.", 
+    "Not even for a coffee?",
+    "Surely not?",
+    "But why?", 
+    "Have a heart!",
+    "Don't be so cold!",
+    "Let's give it a try!",
+    "Just this once?", 
+    "Last chance!",
+    "You're breaking my heart ;(",
   ];
 
   const handleNoClick = (noBtnRef) => {
