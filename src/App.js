@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import './App.css'; // Ensure you have this CSS file in your project
+import React, { useState, useRef } from 'react';
+import './App.css'; 
 
 function App() {
-  const [buttonPosition, setButtonPosition] = useState({ top: '50%', left: '50%' });
   const [clickCount, setClickCount] = useState(0); // Track number of times "No" has been clicked
   const [buttonLabel, setButtonLabel] = useState("No"); // Initial button label
+  const noBtnRef = useRef(null); // Reference to the "No" button
 
   // Array of messages for each click, up to 10
   const messages = [
@@ -21,16 +21,20 @@ function App() {
   ];
 
   const handleNoClick = () => {
-    // Adjusted to ensure the button stays within the viewport
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
-    const buttonWidth = 120; // Adjust based on your actual button size
-    const buttonHeight = 40; // Adjust based on your actual button size
-    const newPosition = {
-      left: `${Math.random() * (viewportWidth - buttonWidth)}px`,
-      top: `${Math.random() * (viewportHeight - buttonHeight)}px`,
-    };
-    setButtonPosition(newPosition);
+    if (noBtnRef.current) {
+      // Introduce a safe margin to account for any additional space needed (like padding/margin)
+      const safeMargin = 5; 
+
+      const maxX = window.innerWidth - noBtnRef.current.offsetWidth - safeMargin;
+      const maxY = window.innerHeight - noBtnRef.current.offsetHeight - safeMargin;
+
+      const randomX = Math.floor(Math.random() * maxX) + safeMargin;
+      const randomY = Math.floor(Math.random() * maxY) + safeMargin;
+
+      noBtnRef.current.style.position = 'fixed'; // Use 'fixed' to ensure it's relative to the viewport
+      noBtnRef.current.style.left = `${randomX}px`;
+      noBtnRef.current.style.top = `${randomY}px`;
+    }
 
     // Update the button label if click count is less than 10
     if (clickCount < messages.length) {
@@ -45,12 +49,7 @@ function App() {
       <div>
         <button onClick={() => alert('Yes! 😊')}>Yes</button>
         <button
-          style={{ 
-            position: 'fixed', 
-            top: buttonPosition.top, 
-            left: buttonPosition.left,
-            transform: 'translate(-50%, -50%)',
-          }}
+          ref={noBtnRef}
           onClick={handleNoClick}
         >
           {buttonLabel}

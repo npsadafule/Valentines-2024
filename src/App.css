@@ -7,20 +7,19 @@ body, html {
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #f69d9d 10%, #ffc898 100%);
-  font-family: 'Poppins', sans-serif; /* Consider adding this font via Google Fonts in your HTML */
-  overflow: hidden; /* Prevents all scrolling */
+  font-family: 'Poppins', sans-serif;
 }
 
 .App {
   text-align: center;
   width: auto;
-  max-width: 600px;
-  margin: 20px;
-  padding: 40px;
+  max-width: 1000px;
+  margin: 0px;
+  padding: 0px;
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px); /* Adds a frosted glass effect */
+  backdrop-filter: blur(10px); 
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
@@ -45,23 +44,24 @@ button {
 
 button:first-child {
   background-color: #4CAF50; /* Green */
+  box-shadow: 0 2px 2px #2e7d32;
 }
 
 button:last-child {
   background-color: #f44336; /* Red */
+  box-shadow: 0 2px 2px #c62828;
 }
 
 button:hover {
   transform: scale(1.08);
-  box-shadow: 0 8px 16px rgba(252, 146, 157, 0.6);
 }
 
 button:first-child:hover {
-  box-shadow: 0 10px 20px rgba(76, 175, 80, .3); /* Green drop shadow */
+  box-shadow: 0 8px 16px rgba(76, 175, 80, 0.6);
 }
 
 button:last-child:hover {
-  box-shadow: 0 10px 20px rgba(244, 67, 54, .3); /* Red drop shadow */
+  box-shadow: 0 8px 16px rgba(244, 67, 54, 0.6);
 }
 
 /* Responsive adjustments */
@@ -83,12 +83,12 @@ button:last-child:hover {
   }
 
   h1 {
-    font-size: 24px;
+    font-size: 24px; /* Adjust font size for smaller screens */
   }
 
   button {
     margin: 5px;
     padding: 10px 15px;
-    font-size: 14px;
+    font-size: 14px; /* Adjust button font size for smaller screens */
   }
 }
