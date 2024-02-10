@@ -39,7 +39,7 @@ function App() {
   };
 
   return (
-    <div className="App" style={{ textAlign: 'center', padding: '10vh 5%' }}>
+    <div className="App">
       {!showMessage ? (
         <Question 
           onYesClick={handleYesClick} 
