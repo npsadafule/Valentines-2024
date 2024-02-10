@@ -3,34 +3,57 @@ import './App.css'; // Ensure you have this CSS file in your project
 
 function App() {
   const [buttonPosition, setButtonPosition] = useState({ top: '50%', left: '50%' });
+  const [clickCount, setClickCount] = useState(0); // Track number of times "No" has been clicked
+  const [buttonLabel, setButtonLabel] = useState("No"); // Initial button label
+
+  // Array of messages for each click, up to 10
+  const messages = [
+    "Why not??",
+    "Seriously?",
+    "Please reconsider.",
+    "Not even for a coffee?",
+    "Are you sure?",
+    "Think again!",
+    "But why?",
+    "Let's give it a try!",
+    "Just this once?",
+    "Last chance, I promise!"
+  ];
 
   const handleNoClick = () => {
-    // Calculate new position within the viewport bounds
-    // Adjusting for estimated button size to ensure it remains fully visible
-    const buttonSize = { width: 100, height: 40 }; // Adjust based on your actual button size
+    // Adjusted to ensure the button stays within the viewport
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const buttonWidth = 120; // Adjust based on your actual button size
+    const buttonHeight = 40; // Adjust based on your actual button size
     const newPosition = {
-      top: `${Math.random() * (window.innerHeight - buttonSize.height) + (buttonSize.height / 2)}px`,
-      left: `${Math.random() * (window.innerWidth - buttonSize.width) + (buttonSize.width / 2)}px`,
+      left: `${Math.random() * (viewportWidth - buttonWidth)}px`,
+      top: `${Math.random() * (viewportHeight - buttonHeight)}px`,
     };
     setButtonPosition(newPosition);
+
+    // Update the button label if click count is less than 10
+    if (clickCount < messages.length) {
+      setButtonLabel(messages[clickCount]);
+      setClickCount(clickCount + 1);
+    }
   };
 
   return (
     <div className="App" style={{ textAlign: 'center', padding: '10vh 5%' }}>
-      <h1>Do you want to go out with me?</h1>
+      <h1>🥰 Would you like to go on a date with me? 🥰</h1>
       <div>
         <button onClick={() => alert('Yes! 😊')}>Yes</button>
         <button
           style={{ 
-            position: 'fixed', // Ensures the button stays within the viewport
+            position: 'fixed', 
             top: buttonPosition.top, 
             left: buttonPosition.left,
-            transform: 'translate(-50%, -50%)', // Centers the button at its new position
-            // Ensuring button is accessible and visible
+            transform: 'translate(-50%, -50%)',
           }}
-          onClick={handleNoClick} // Moves the button on click, suitable for both desktop and mobile
+          onClick={handleNoClick}
         >
-          No
+          {buttonLabel}
         </button>
       </div>
     </div>

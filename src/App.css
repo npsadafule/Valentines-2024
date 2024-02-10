@@ -7,8 +7,8 @@ body, html {
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #f69d9d 10%, #ffc898 100%);
-  font-family: 'Arial', sans-serif;
-  overflow-x: hidden; /* Prevents horizontal scrolling on smaller screens */
+  font-family: 'Poppins', sans-serif; /* Consider adding this font via Google Fonts in your HTML */
+  overflow: hidden; /* Prevents all scrolling */
 }
 
 .App {
@@ -17,32 +17,30 @@ body, html {
   max-width: 600px;
   margin: 20px;
   padding: 40px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition: padding 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Adds a frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 h1 {
-  color: #333;
-  margin-bottom: 40px;
+  color: #444;
+  margin-bottom: 50px;
+  font-size: 28px;
+  font-weight: 600;
 }
 
 button {
   margin: 10px;
   padding: 15px 30px;
   font-size: 18px;
-  color: white;
+  color: #fff;
   cursor: pointer;
   border: none;
-  border-radius: 25px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 30px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
   outline: none;
-}
-
-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 button:first-child {
@@ -51,6 +49,19 @@ button:first-child {
 
 button:last-child {
   background-color: #f44336; /* Red */
+}
+
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(252, 146, 157, 0.6);
+}
+
+button:first-child:hover {
+  box-shadow: 0 10px 20px rgba(76, 175, 80, .3); /* Green drop shadow */
+}
+
+button:last-child:hover {
+  box-shadow: 0 10px 20px rgba(244, 67, 54, .3); /* Red drop shadow */
 }
 
 /* Responsive adjustments */
@@ -72,12 +83,12 @@ button:last-child {
   }
 
   h1 {
-    font-size: 24px; /* Adjust font size for smaller screens */
+    font-size: 24px;
   }
 
   button {
     margin: 5px;
     padding: 10px 15px;
-    font-size: 14px; /* Adjust button font size for smaller screens */
+    font-size: 14px;
   }
 }
