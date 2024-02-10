@@ -31,11 +31,15 @@ body, html {
 }
 
 .v2024 {
-  color: #444;
+  color: #fd4741;
   margin-bottom: 30px;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 600;
+  text-shadow: 1px 2px 3px #ff7e7a,
+               1px 2px 2px #ff7e7a,
+               1px 2px 1px #ff7e7a;
 }
+
 
 .neel{
   color: #444;
