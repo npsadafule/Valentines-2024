@@ -38,7 +38,7 @@ function App() {
     "Let's give it a try!",
     "Just this once?", 
     "Last chance!",
-    "You're breaking my heart ;(",
+    "You're breaking my heart 😭",
   ];
 
   const handleNoClick = (noBtnRef) => {
@@ -73,7 +73,7 @@ function App() {
         </div>
       )}
       <header>
-        <h1>Valentine's Day 2024</h1>
+        <h1 class="v2024">Valentine's Day 2024</h1>
       </header>
       <main>
         {!showMessage ? (
@@ -87,7 +87,7 @@ function App() {
         )}
       </main>
       <footer>
-        <p>Created by: Neel Sadafule</p>
+        <p class="neel">Created by: Neel Sadafule</p>
       </footer>
     </div>
   );

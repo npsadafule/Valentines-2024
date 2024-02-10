@@ -23,11 +23,25 @@ body, html {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
+.valentine {
   color: #444;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   font-size: 28px;
   font-weight: 600;
+}
+
+.v2024 {
+  color: #444;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.neel{
+  color: #444;
+  margin-top: 10%;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 button {
@@ -52,4 +66,10 @@ button:last-child {
 
 button:hover {
   transform: scale(1.08);
+}
+
+p{
+  margin-top: 20px;
+  font-size: 20px;
+  color: #444;
 }
