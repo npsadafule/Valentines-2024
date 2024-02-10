@@ -1,24 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css'; // Ensure you have this CSS file in your project
 
 function App() {
   const [buttonPosition, setButtonPosition] = useState({ top: '50%', left: '50%' });
-  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
-  useEffect(() => {
-    // Function to check if the device is a touch device
-    function detectTouchDevice() {
-      setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0);
-    }
-
-    // Check once on component mount
-    detectTouchDevice();
-  }, []);
-
-  const handleNoInteraction = () => {
+  const handleNoClick = () => {
+    // Calculate new position within the viewport bounds
+    // Adjusting for estimated button size to ensure it remains fully visible
+    const buttonSize = { width: 100, height: 40 }; // Adjust based on your actual button size
     const newPosition = {
-      top: `${Math.random() * (window.innerHeight - 60) + 30}px`,
-      left: `${Math.random() * (window.innerWidth - 60) + 30}px`,
+      top: `${Math.random() * (window.innerHeight - buttonSize.height) + (buttonSize.height / 2)}px`,
+      left: `${Math.random() * (window.innerWidth - buttonSize.width) + (buttonSize.width / 2)}px`,
     };
     setButtonPosition(newPosition);
   };
@@ -30,13 +22,13 @@ function App() {
         <button onClick={() => alert('Yes! 😊')}>Yes</button>
         <button
           style={{ 
-            position: 'fixed', 
+            position: 'fixed', // Ensures the button stays within the viewport
             top: buttonPosition.top, 
             left: buttonPosition.left,
-            transform: 'translate(-50%, -50%)',
+            transform: 'translate(-50%, -50%)', // Centers the button at its new position
+            // Ensuring button is accessible and visible
           }}
-          onMouseOver={!isTouchDevice ? handleNoInteraction : null}
-          onClick={isTouchDevice ? handleNoInteraction : null}
+          onClick={handleNoClick} // Moves the button on click, suitable for both desktop and mobile
         >
           No
         </button>
