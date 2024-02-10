@@ -1,14 +1,27 @@
 // App.js
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Question from './Question';
 import Message from './Message';
+import Confetti from 'react-confetti';
 
 function App() {
   const [clickCount, setClickCount] = useState(0);
   const [buttonLabel, setButtonLabel] = useState("No");
   const [showMessage, setShowMessage] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [fadeOutConfetti, setFadeOutConfetti] = useState(false);
+
+  useEffect(() => {
+    if (fadeOutConfetti) {
+      const timer = setTimeout(() => {
+        setShowConfetti(false);
+        setFadeOutConfetti(false);
+      }, 3000); 
+      return () => clearTimeout(timer);
+    }
+  }, [fadeOutConfetti]);
 
   const messages = [
     "Why not??", 
@@ -48,10 +61,17 @@ function App() {
 
   const handleYesClick = () => {
     setShowMessage(true);
+    setShowConfetti(true);
+    setTimeout(() => setFadeOutConfetti(true), 3000); 
   };
 
   return (
     <div className="App">
+      {showConfetti && (
+        <div className={fadeOutConfetti ? 'fadeOut' : ''}>
+          <Confetti />
+        </div>
+      )}
       <header>
         <h1>Valentine's Day 2024</h1>
       </header>
