@@ -51,15 +51,23 @@ function App() {
 
   return (
     <div className="App">
-      {!showMessage ? (
-        <Question 
-          onYesClick={handleYesClick} 
-          onNoClick={handleNoClick} 
-          noButtonLabel={buttonLabel}
-        />
-      ) : (
-        <Message />
-      )}
+      <header>
+        <h1>Valentine's Day 2024</h1>
+      </header>
+      <main>
+        {!showMessage ? (
+          <Question 
+            onYesClick={handleYesClick} 
+            onNoClick={handleNoClick} 
+            noButtonLabel={buttonLabel}
+          />
+        ) : (
+          <Message />
+        )}
+      </main>
+      <footer>
+        <p>Created by: Neel Sadafule</p>
+      </footer>
     </div>
   );
 }

@@ -6,7 +6,7 @@ function Question({ onYesClick, onNoClick, noButtonLabel }) {
 
   return (
     <>
-      <h1>🥰 Would you like to go on a date with me? 🥰</h1>
+      <h1>🥰 Will you be my Valentine? 🥰</h1>
       <div>
         <button onClick={onYesClick}>Yes</button>
         <button
