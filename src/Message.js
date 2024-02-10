@@ -1,5 +1,7 @@
+//Message.js
+
 import React from 'react';
-import './Message.css'; // Import the CSS file here
+import './Message.css';
 
 function Message() {
   return (

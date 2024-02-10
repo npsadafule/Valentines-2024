@@ -1,4 +1,5 @@
 // Question.js
+
 import React, { useRef } from 'react';
 
 function Question({ onYesClick, onNoClick, noButtonLabel }) {
