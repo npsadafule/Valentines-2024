@@ -10,10 +10,6 @@
     transition: transform 0.3s ease-in-out;
   }
   
-  .message-container:hover {
-    transform: scale(1.05); /* Slight scale on hover for interaction feedback */
-  }
-  
   .love-message {
     color: #e91e63; /* Pink color for the text */
     font-family: 'Poppins', sans-serif;
