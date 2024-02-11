@@ -24,22 +24,29 @@ function App() {
   }, [fadeOutConfetti]);
 
   const messages = [
-    "Why not??", 
-    "Are you sure?",
-    "Really sure?",
-    "Seriously?",
-    "Think again!",
-    "Please reconsider.", 
-    "Not even for a coffee?",
-    "Surely not?",
-    "But why?", 
-    "Have a heart!",
-    "Don't be so cold!",
-    "Let's give it a try!",
-    "Just this once?", 
-    "Last chance!",
-    "You're breaking my heart 😭",
-  ];
+    "Why not?? 🤔",
+    "Are you sure? 🧐",
+    "No love for cat gifs? 🐱💔",
+    "Really sure? 🤨",
+    "Seriously? 😒",
+    "Are we not purr-fect together? 🐾❤️",
+    "Give us a chance? 🥺👉👈",
+    "Is it something I said? 🗣️😟",
+    "Can we start over? 🔄❤️",
+    "Are you playing hard to get? 🔍",
+    "Swiping left on us? 💔👈",
+    "Think again! 🔄",
+    "Please reconsider. 🙏",
+    "Not even for a coffee? ☕️",
+    "Surely not? 🚫",
+    "But why? 🤔💭",
+    "Have a heart! ❤️",
+    "Don't be so cold! ❄️",
+    "Let's give it a try! 🤝",
+    "Just this once? 🙇‍♂️",
+    "Last chance! ⏳",
+    "You're breaking my heart 😭💔",
+];
 
   const handleNoClick = (noBtnRef) => {
     const safeMargin = 5;
