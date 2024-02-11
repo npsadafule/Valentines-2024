@@ -86,7 +86,7 @@ function App() {
         </div>
       )}
       <header>
-        <h1 className="v2024">Valentine's Day 2024</h1>
+        <h1 className="v2024">Valentine's 2024</h1>
       </header>
       <main>
         {!showMessage ? (
