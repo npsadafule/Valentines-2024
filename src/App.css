@@ -32,7 +32,7 @@ body, html {
 
 .v2024 {
   color: #fd4741;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: 30px;
   font-weight: 600;
   text-shadow: 1px 1px 0.5px #ff7e7a,
@@ -93,7 +93,7 @@ button:nth-child(2):hover {
 }
 
 .back-button:hover {
-  background-color: #cf0067; /* Darker shade on hover */
+  background-color: #cf0067; 
 }
 
 .cat-image {
