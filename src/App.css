@@ -25,7 +25,7 @@ body, html {
 
 .valentine {
   color: #444;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-size: 28px;
   font-weight: 600;
 }
@@ -42,9 +42,9 @@ body, html {
 
 .neel{
   color: #444;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 16px;
+  font-size: 10px;
 }
 
 button {
@@ -105,9 +105,9 @@ button:nth-child(2):hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-hint{
+.hint{
   margin-top: 5px;
-  font-size: 12px;
+  font-size: 15px;
   color: #444;
 }
 
