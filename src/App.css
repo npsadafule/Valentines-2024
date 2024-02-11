@@ -25,7 +25,7 @@ body, html {
 
 .valentine {
   color: #444;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 28px;
   font-weight: 600;
 }
@@ -42,7 +42,7 @@ body, html {
 
 .neel{
   color: #444;
-  margin-top: 10%;
+  margin-top: 5px;
   margin-bottom: 10px;
   font-size: 16px;
 }
@@ -70,14 +70,30 @@ button:first-child:hover {
   background-color: #37b239; 
 }
 
-button:last-child {
+button:nth-child(2) {
   background-color: #f44336; /* Red */
 }
 
-button:last-child:hover {
+button:nth-child(2):hover {
   transform: scale(1.08);
   box-shadow: 0 10px 20px -2px rgba(244, 67, 54, 0.5); 
   background-color: #db201a;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #008dd3; /* Red */
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #cf0067; /* Darker shade on hover */
 }
 
 .cat-image {
@@ -89,8 +105,14 @@ button:last-child:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+hint{
+  margin-top: 5px;
+  font-size: 12px;
+  color: #444;
+}
+
 p{
-  margin-top: 20px;
-  font-size: 20px;
+  margin-top: 5px;
+  font-size: 12px;
   color: #444;
 }

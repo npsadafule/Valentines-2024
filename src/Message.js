@@ -3,7 +3,7 @@
 import React from 'react';
 import './Message.css';
 
-function Message() {
+function Message({ onBackClick }) {
   return (
     <div className="message-container">
       <h2 className="love-message">Yayyy!!! 🥰</h2>
@@ -12,8 +12,10 @@ function Message() {
         alt="Love Gif" 
         className="love-gif"
       />
+      <button className="back-button" onClick={onBackClick}>Back</button>
     </div>
   );
 }
 
 export default Message;
+

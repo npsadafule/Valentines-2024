@@ -20,6 +20,7 @@ function Question({ onYesClick, onNoClick, noButtonLabel }) {
     <>
       <img src={currentImage} alt="Cat" className="cat-image"/>
       <h1 className="valentine">🥰 Will you be my Valentine? 🥰</h1>
+      <p className="hint">You could try clicking no 🙃</p>
       <div>
         <button onClick={onYesClick}>Yes</button>
         <button ref={noBtnRef} onClick={handleNoClick}>

@@ -26,20 +26,20 @@ function App() {
   const messages = [
     "Why not?? 🤔",
     "Are you sure? 🧐",
-    "No love for cat gifs? 🐱💔",
+    "No love for cat gifs? 🐱",
     "Really sure? 🤨",
     "Seriously? 😒",
-    "Are we not purr-fect together? 🐾❤️",
+    "Are we not purr-fect together? 🐾",
     "Give us a chance? 🥺👉👈",
-    "Is it something I said? 🗣️😟",
-    "Can we start over? 🔄❤️",
+    "Is it something I said? 😟",
+    "Can we start over? 🔄",
     "Are you playing hard to get? 🔍",
-    "Swiping left on us? 💔👈",
+    "Swiping left on us? 💔",
     "Think again! 🔄",
     "Please reconsider. 🙏",
     "Not even for a coffee? ☕️",
     "Surely not? 🚫",
-    "But why? 🤔💭",
+    "But why? 🤔",
     "Have a heart! ❤️",
     "Don't be so cold! ❄️",
     "Let's give it a try! 🤝",
@@ -72,6 +72,12 @@ function App() {
     setTimeout(() => setFadeOutConfetti(true), 3000); 
   };
 
+  const handleBackClick = () => {
+    setShowMessage(false); // Hide the message, show the question
+    setClickCount(0); // Reset click count if needed
+    setButtonLabel("No"); // Reset button label to "No"
+  };
+
   return (
     <div className="App">
       {showConfetti && (
@@ -80,7 +86,7 @@ function App() {
         </div>
       )}
       <header>
-        <h1 class="v2024">Valentine's Day 2024</h1>
+        <h1 className="v2024">Valentine's Day 2024</h1>
       </header>
       <main>
         {!showMessage ? (
@@ -90,11 +96,11 @@ function App() {
             noButtonLabel={buttonLabel}
           />
         ) : (
-          <Message />
+          <Message onBackClick={handleBackClick} />
         )}
       </main>
       <footer>
-        <p class="neel">Created by: Neel Sadafule</p>
+        <p className="neel">Created by: Neel Sadafule</p>
       </footer>
     </div>
   );

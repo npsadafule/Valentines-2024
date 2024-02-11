@@ -1,39 +1,45 @@
 /* Message.css */
 
 .message-container {
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    background-color: #fff5f8; /* Light pink background */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .love-message {
-    color: #e91e63; /* Pink color for the text */
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    animation: pulse 1.5s infinite; /* Add a pulsing animation to the message */
-  }
-  
-  .love-gif {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #fff5f8; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.love-message {
+  color: #e91e63; 
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.love-gif {
+  max-width: 80%; 
+  height: auto; 
+  margin-bottom: 10px; 
+}
+
+.back-button {
+  margin-top: 10px; 
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #008dd3; 
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #cf0067; 
+}
