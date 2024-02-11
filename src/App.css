@@ -40,7 +40,6 @@ body, html {
                1px 1px 0.5px #ff7e7a;
 }
 
-
 .neel{
   color: #444;
   margin-top: 10%;
@@ -56,20 +55,48 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 30px;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease; 
   outline: none;
+  background-color: #4CAF50;
 }
 
 button:first-child {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
+}
+
+button:first-child:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px -2px rgba(76, 175, 80, 0.5);
+  background-color: #37b239; 
 }
 
 button:last-child {
   background-color: #f44336; /* Red */
 }
 
-button:hover {
+button:last-child:hover {
   transform: scale(1.08);
+  box-shadow: 0 10px 20px -2px rgba(244, 67, 54, 0.5); 
+  background-color: #db201a;
+}
+
+.cat-image {
+  width: 225px;
+  height: 225px;
+  object-fit: cover;
+  margin: 20px auto;
+  border-radius: 10px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: zoomInOut 1s infinite; 
+}
+
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.1);
+  }
 }
 
 p{
